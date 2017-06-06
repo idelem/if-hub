@@ -1,0 +1,9 @@
+属性：
+*stat_chart
+  text gold 金钱
+  text hp 生命
+好感度：
+*stat_chart
+  percent rel_lord 侯爵
+  percent rel_artist 画家
+  percent rel_sorceror 法师

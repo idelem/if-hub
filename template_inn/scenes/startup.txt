@@ -1,0 +1,62 @@
+*comment Copyright 2010 by Dan Fabulich.
+*comment
+*comment Dan Fabulich licenses this file to you under the
+*comment ChoiceScript License, Version 1.0 (the "License"); you may
+*comment not use this file except in compliance with the License.
+*comment You may obtain a copy of the License at
+*comment
+*comment  http://www.choiceofgames.com/LICENSE-1.0.txt
+*comment
+*comment See the License for the specific language governing
+*comment permissions and limitations under the License.
+*comment
+*comment Unless required by applicable law or agreed to in writing,
+*comment software distributed under the License is distributed on an
+*comment "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+*comment either express or implied.
+
+*comment ========= 定义成就 =========
+
+*achievement a1 visible 10 测试
+  用于测试成就
+*achievement a2 visible 50 debug 狂人
+  刷新页面超过50次
+*achievement a3 visible 10 闰土
+  攻击3只猹
+*achievement a4 hidden 100 后记
+  hidden
+  顺利通关！这里是一段通关后记。多年以后，奥雷连诺上校站在行刑队面前，准会想起父亲带他去参观冰块的那个遥远的下午。当时，马孔多是个二十户人家的村庄，一座座土房都盖在河岸上，河水清澈，沿着遍布石头的河床流去，河里的石头光滑、洁白，活象史前的巨蛋。
+
+*comment ========= 游戏信息 =========
+
+*title 沙之书
+
+*scene_list
+  startup
+  prologue
+  ending
+  death
+
+*comment ========= 全局变量 =========
+
+*create gold 30
+*create hp 100
+
+*create rel_lord 0
+*create rel_artist 0
+*create rel_sorceror 0
+
+*comment ========= 淡入淡出 =========
+
+*create scenecolor "#FFFFFF"
+*create scenecolor2 "#000000"
+*create togglescenefade true
+*create scenefadetime "1s"
+*create isolateschemes false
+*create statscreencolor ""
+*create statscreencolor2 ""
+*create togglestatscreenfade false
+*create statscreenfadetime ""
+
+*comment ========= 存档设定 =========
+*sm_init mygame | 6
