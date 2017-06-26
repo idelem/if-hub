@@ -7,8 +7,9 @@ body {
   font: -apple-system-body; /* we'll override the font, but keep the size from iOS dynamic text sizing */
   /*font-family: "Roboto Slab",sans-serif;*/
   /*font-family: 'Noto Sans SC', serif;*/
-  font-family: monospace;
-  font-weight: 300;
+  font-family: source-han-serif-sc, serif;
+  font-style: normal;
+  font-weight: 500;
   background-color: #FFF !important;
   color: #555;
   padding: 0 0;
