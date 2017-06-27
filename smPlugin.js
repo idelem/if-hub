@@ -111,7 +111,8 @@ checkLocalStorage();
 			stats["savemod_slot_" + i] = localStorage[saveMod.game_id + "_savemod_name_" + i];
 		}
 		else {
-			stats["savemod_slot_" + i] = "No Data";
+			// stats["savemod_slot_" + i] = "No Data";
+            stats["savemod_slot_" + i] = "无档案";
 		}
 	}
 }
@@ -269,7 +270,8 @@ Scene.prototype.sm_delete = function sm_delete(data) {
                 var saveData = saveMod.game_id + "_savemod_data_" + data;
                 localStorage.removeItem(saveID);
                 localStorage.removeItem(saveData);
-                stats["savemod_slot_" + data] = "No Data";
+                // stats["savemod_slot_" + data] = "No Data";
+                stats["savemod_slot_" + data] = "无档案";
                 //alertify.success("Deletion succesful!" );
                 alertify.success("存档已删除。" );
             }
@@ -377,7 +379,7 @@ function getSaveDate() {
         //date = day + "/" + month + "/" + year;
         //var time = hours + ":" + mins;
 		//var saveName = "Autosave on the " + date + " at " + time;
-        date = year + "/" + month + "/" + day;
+        date = year + "-" + month + "-" + day;
         var time = hours + ":" + mins;
         var saveName = date + " " + time;
 		return saveName;

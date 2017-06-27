@@ -58,7 +58,10 @@ var smPluginMenuAddon = {
 	"updateSlotText": function() {
 		var optionEle = document.getElementById("quickSaveMenu").childNodes[smPluginMenuAddon.currentSlot];
 		//optionEle.innerHTML = "Slot " + smPluginMenuAddon.currentSlot + ": " + stats["savemod_slot_" + smPluginMenuAddon.currentSlot];
-        optionEle.innerHTML = smPluginMenuAddon.currentSlot + ": " + stats["savemod_slot_" + smPluginMenuAddon.currentSlot];
+
+        // Change the content of save slot
+        // optionEle.innerHTML = smPluginMenuAddon.currentSlot + ": " + stats["savemod_slot_" + smPluginMenuAddon.currentSlot];
+        optionEle.innerHTML = "— " + stats["savemod_slot_" + smPluginMenuAddon.currentSlot] + " —";;
 	},
 	"active": true,
 	"currentSlot": "0",
@@ -97,7 +100,8 @@ setTimeout(function() {
 		option.setAttribute("value", slot);
 		if (typeof stats["savemod_slot_" + slot] != 'undefined') {
 			//option.innerHTML = "Slot " + slot + ": " + stats["savemod_slot_" + slot];
-            option.innerHTML = slot + ": " + stats["savemod_slot_" + slot];
+            // option.innerHTML = slot + ": " + stats["savemod_slot_" + slot];
+            option.innerHTML = "— " + stats["savemod_slot_" + slot] + " —";
 		}
 		else {
 			option.innerHTML = "Error: Bad Slot - Has smPlugin been included?";

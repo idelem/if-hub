@@ -16,5 +16,5 @@
 *comment either express or implied.
 
 测试游戏到此结束。
-
-*ending
+*page_break 重新开始
+*goto_scene startup

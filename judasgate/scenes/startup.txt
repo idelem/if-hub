@@ -29,7 +29,7 @@
 
 *comment ========= 游戏信息 =========
 
-*title 沙之书
+*title 犹大之门
 
 *scene_list
   startup
@@ -60,3 +60,13 @@
 
 *comment ========= 存档设定 =========
 *sm_init mygame | 6
+
+警告：含有成人内容。
+*line_break
+——
+*line_break
+剧本：idelem
+*line_break
+制作：idelem
+
+*finish 开始游戏
