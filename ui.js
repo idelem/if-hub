@@ -535,6 +535,8 @@ function printOptionRadioButton(div, name, option, localChoiceNumber, globalChoi
     var radio;
     var div2 = document.createElement("div");
     var label = document.createElement("label");
+    var span = document.createElement("span");
+    span.setAttribute("id", "choiceItem");
     // IE doesn't allow you to dynamically specify the name of radio buttons
     if (!/^\w+$/.test(name)) throw new Error("invalid choice group name: " + name);
     label.innerHTML = "<input type='radio' name='"+name+
@@ -575,8 +577,9 @@ function printOptionRadioButton(div, name, option, localChoiceNumber, globalChoi
         };
       }
     }
-    printx(line, label);
+    printx(line, span);
 
+    label.appendChild(span);
     div2.appendChild(label);
     div.appendChild(div2);
 }

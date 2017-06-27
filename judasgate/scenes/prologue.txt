@@ -2,8 +2,29 @@
 
 在小镇上待久了，你都快忘了自己的过去。
 
-是的。表面看来，你是个外表俊美的酒馆老板，出乎意料地年轻。
+是的。表面看来，你是个年轻得叫人意外的酒馆老板……
 
-*fake_choice
+*choice
   #出去走走
+    去哪里呢？
+    *choice
+      #集市
+        *goto construct
+      #后巷
+        *goto construct
+      #小树林
+        *goto construct
   #打招呼
+    和谁打招呼？
+    *choice
+      #隔壁旅馆老板
+        ……
+        *finish 结束了一天
+      #楼上的穷画家
+        *set rel_artist + 10
+        ……关系有所进展。不如去看看属性面板吧？
+        *finish 结束了一天
+
+*label construct
+（施工中……）
+*finish 好吧……

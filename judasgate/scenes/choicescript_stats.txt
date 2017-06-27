@@ -1,9 +1,48 @@
-属性：
+*temp stat_page 0
+
+*label main_stat_page
+—— 基本数值 ——
 *stat_chart
   text gold 金钱
   text hp 生命
-好感度：
+*goto navigation_menu
+
+*label personal_stat_page
+—— 人物属性 ——
+*stat_chart
+  text str 力量
+  text dex 敏捷
+  text con 体质
+  text int 智力
+  text wis 感知
+  text cha 魅力
+*goto navigation_menu
+
+*label relationship_stat_page
+—— 好感 ——
 *stat_chart
   percent rel_lord 侯爵
   percent rel_artist 画家
   percent rel_sorceror 法师
+*goto navigation_menu
+
+*label recipe_page
+This is a recipe page.
+*goto navigation_menu
+
+*label navigation_menu
+
+—— 主菜单 ——
+*choice
+     *if (stat_page != 0) #基本数值
+        *set stat_page 0
+        *goto main_stat_page
+    *if (stat_page != 1) #人物属性
+        *set stat_page 1
+        *goto personal_stat_page
+    *if (stat_page != 2) #好感度
+        *set stat_page 2
+        *goto relationship_stat_page
+    *if (stat_page != 3) #菜谱
+        *set stat_page 3
+        *goto recipe_page

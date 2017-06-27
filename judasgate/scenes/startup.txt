@@ -42,7 +42,14 @@
 *create gold 30
 *create hp 100
 
-*create rel_lord 0
+*create str 8
+*create dex 13
+*create con 6
+*create int 16
+*create wis 18
+*create cha 20
+
+*create rel_lord 20
 *create rel_artist 0
 *create rel_sorceror 0
 
@@ -61,12 +68,8 @@
 *comment ========= 存档设定 =========
 *sm_init mygame | 6
 
-警告：含有成人内容。
+这是一个基于 ChoiceScript 的文字游戏范例。
 *line_break
-——
-*line_break
-剧本：idelem
-*line_break
-制作：idelem
+点击上方导航栏可查看人物属性。在下拉菜单中选择存档位，即可进行读档、存档、删除等操作。
 
 *finish 开始游戏

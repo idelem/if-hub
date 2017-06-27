@@ -65,7 +65,8 @@ button {
   text-align: center;
 }
 button:hover {
-  background-color: #edeae4
+  /*background-color: #edeae4; */
+  color: #8d2424;
 }
 
 select {
@@ -133,13 +134,13 @@ option {
 }
 
 .statBar {
-  background-color: #F69A1D;
+  background-color: #505668;
   height: 2em;
   line-height: 2em;
   margin: 10px auto !important;
   /*width: 300px;*/
   width: 95%;
-  color: #fff;
+  color: #c3bfab;
   position: relative; /* to allow absolute positioned value */
   z-index: 0;
 }
@@ -165,11 +166,7 @@ table {
 }
 
 .statValue {
-  /*background-color: #8A2BE2;*/
-  /*background-color: #fbc2eb;*/
-  /*background-color: #5ee7df;*/
-  background-color: #EA4F21;
-  /*background-color: #F69A1D;*/
+  background-color: #8d2424;
   position: absolute;
   top: 0;
   left: 0;
@@ -186,8 +183,28 @@ table {
     /*border-style:solid;*/
     /*border-width: 1px 1px 0px 1px*/
 }
-.choice::before {
+.choice span:before {
+    content: "";
+    background: url("closed.png") center center no-repeat;
+    width: 21px; height: 21px;
+    margin-right: 8px;
+    display: inline-block;
+    position: relative;
+}
 
+input[type="radio"], input[type="checkbox"] {
+  margin-right: 8px;
+  visibility: hidden;
+  display: none;
+}
+
+.choice input[type="radio"]:checked + span:before {
+    content: "";
+    background: url("open.png") center center no-repeat;
+    width: 21px; height: 21px;
+    margin-right: 8px;
+    display: inline-block;
+    position: relative;
 }
 
 .choice .firstChild{
@@ -215,11 +232,6 @@ table {
 
 .choice .noBorder {
   border-width: 0;
-}
-
-input[type="radio"], input[type="checkbox"] {
-  margin-right: 8px;
-  /*visibility: hidden;*/
 }
 
 .saveGame>label {
@@ -270,7 +282,7 @@ input[type=email],input[type=password] {
 
 .next:hover {
     background-color: transparent;
-    color: #aaa;
+    color: #8d2424;
 }
 
 .h2-wrapper {
